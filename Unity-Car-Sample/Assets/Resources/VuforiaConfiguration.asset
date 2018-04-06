@@ -44,9 +44,9 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
-    - VuforiaMars_Images
+    - car_test
     dataSetsToActivate:
-    - VuforiaMars_Images
+    - car_test
   videoBackground:
     clippingMode: 0
     numDivisions: 2
