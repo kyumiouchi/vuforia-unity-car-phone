@@ -98,15 +98,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
-    agentHeight: 1
+    agentRadius: 1.5
+    agentHeight: 1.5
     agentSlope: 45
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.5
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -154,15 +154,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 470836, guid: ffe00fa3bd41b9a4db665bf728e3c1e1, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 470836, guid: ffe00fa3bd41b9a4db665bf728e3c1e1, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 470836, guid: ffe00fa3bd41b9a4db665bf728e3c1e1, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8236312, guid: ffe00fa3bd41b9a4db665bf728e3c1e1, type: 2}
       propertyPath: panLevelCustomCurve.m_RotationOrder
@@ -198,11 +198,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 111834, guid: ffe00fa3bd41b9a4db665bf728e3c1e1, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 165296, guid: ffe00fa3bd41b9a4db665bf728e3c1e1, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 193236, guid: ffe00fa3bd41b9a4db665bf728e3c1e1, type: 2}
       propertyPath: m_IsActive
@@ -226,6 +226,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5498434, guid: ffe00fa3bd41b9a4db665bf728e3c1e1, type: 2}
       propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 117452, guid: ffe00fa3bd41b9a4db665bf728e3c1e1, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 177624, guid: ffe00fa3bd41b9a4db665bf728e3c1e1, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -380,9 +388,9 @@ NavMeshAgent:
   m_GameObject: {fileID: 770865556}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1.5
   m_Speed: 50
-  m_Acceleration: 200
+  m_Acceleration: 80
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 40

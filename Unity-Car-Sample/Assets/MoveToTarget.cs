@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class MoveToTarget : MonoBehaviour
 {
     NavMeshAgent agent;
+    Vector3 destination;
 
     // Use this for initialization
     void Start()
@@ -20,7 +22,6 @@ public class MoveToTarget : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Teste");
             MoveTo();
         }
 
@@ -37,8 +38,7 @@ public class MoveToTarget : MonoBehaviour
 
         if (Physics.Raycast(cameraRay, out hit))
         {
-            agent.destination = hit.point;
-            Debug.Log("hit.point " + hit.point);
+            agent.destination = new Vector3(hit.point.x, transform.position.y, hit.point.z);
         }
     }
 }
