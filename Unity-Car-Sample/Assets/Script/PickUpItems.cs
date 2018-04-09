@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class PickUpItems : MonoBehaviour {
 
     public Text countText;
-    public Text winText;
+    public Image winText;
     public int maxItems;
     public Button restartButton;
     public GameObject[] pickUps;
+    public GameObject pickUpFirst;
 
     private int count;
     // Use this for initialization
@@ -33,8 +34,15 @@ public class PickUpItems : MonoBehaviour {
     // store a reference to that collider in a variable named 'other'..
     void OnTriggerEnter(Collider other)
     {
+        if(other.gameObject.CompareTag("PickUpFirst"))
+        {
+            other.gameObject.SetActive(false);
+            
+            pickUpFirst.SetActive(false);
+
+        }
         // ..and if the game object we intersect has the tag 'Pick Up' assigned to it..
-        if (other.gameObject.CompareTag("PickUp"))
+        if (other.gameObject.CompareTag("PickUp") && !pickUpFirst.activeSelf)
         {
             // Make the other game object (the pick up) inactive, to make it disappear
             other.gameObject.SetActive(false);
@@ -59,12 +67,12 @@ public class PickUpItems : MonoBehaviour {
         if (count >= maxItems)
         {
             // Set the text value of our 'winText'
-            winText.text = "Você Ganhou!";
+            winText.enabled = true;
             restartButton.gameObject.SetActive(true);
         } else
         {
             // Set the text property of our Win Text UI to an empty string, making the 'You Win' (game over message) blank
-            winText.text = "";
+            winText.enabled = false;
         }
     }
 
