@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR;
+using Vuforia;
 
 public class PickUpItems : MonoBehaviour {
 
@@ -73,6 +75,17 @@ public class PickUpItems : MonoBehaviour {
         {
             // Set the text property of our Win Text UI to an empty string, making the 'You Win' (game over message) blank
             winText.enabled = false;
+        }
+    }
+
+    public void TurnOffAR()
+    {
+        if (VuforiaBehaviour.Instance.enabled)
+        {
+            VuforiaBehaviour.Instance.enabled = false;
+        } else
+        {
+            VuforiaBehaviour.Instance.enabled = true;
         }
     }
 
